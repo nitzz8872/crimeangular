@@ -1,0 +1,11 @@
+<section class="container">
+  <div class="news" *ngFor="let news of fetchedNews">
+    <div class="image"><img src="{{ news.urlToImage }}" alt="image" /></div>
+    <div class="title">
+      <strong> {{ news.title }} </strong>
+    </div>
+   
+
+  </div>
+
+</section>

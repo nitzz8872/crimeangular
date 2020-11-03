@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        nav {
+            display: flex;
+            height: 80px;
+            width: 100%;
+            background: #1b1b1b;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px 0 100px;
+            flex-wrap: wrap;
+        }
+        
+        nav .logo {
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 5px;
+        }
+        
+        nav ul li a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #111;
+            background: #fff;
+        }
+        
+        nav .menu-btn i {
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        @media (max-width: 1000px) {
+            nav {
+                padding: 0 40px 0 50px;
+            }
+        }
+        
+        @media (max-width: 920px) {
+            nav .menu-btn i {
+                display: block;
+            }
+            #click:checked~.menu-btn i:before {
+                content: "\f00d";
+            }
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background: #111;
+                height: 100vh;
+                width: 100%;
+                text-align: center;
+                display: block;
+                transition: all 0.3s ease;
+            }
+            #click:checked~ul {
+                left: 0;
+            }
+            nav ul li {
+                width: 100%;
+                margin: 40px 0;
+            }
+            nav ul li a {
+                width: 100%;
+                margin-left: -100%;
+                display: block;
+                font-size: 20px;
+                transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            #click:checked~ul li a {
+                margin-left: 0px;
+            }
+            nav ul li a.active,
+            nav ul li a:hover {
+                background: none;
+                color: cyan;
+            }
+        }
+        
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 18px;
+        }
+        
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: black;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 2px 2px 3px #999;
+        }
+        
+        .my-float {
+            margin-top: 22px;
+        }
+        
+        .form-inline {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+        
+        .form-inline label {
+            margin: 5px 10px 5px 0;
+        }
+        
+        .form-inline input {
+            vertical-align: middle;
+            margin: 5px 10px 5px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        
+        .form-inline button {
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            border: 1px solid #ddd;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .form-inline button:hover {
+            background-color: royalblue;
+        }
+        
+        @media (max-width: 800px) {
+            .form-inline input {
+                margin: 10px 0;
+            }
+            .form-inline {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        
+        
+        
+        .list ul {
+            background: #F2F2F2;
+            padding: 20px;
+        }
+        
+        .list ul li {
+            background: white;
+            margin: 5px;
+        }
+        
+        
+        
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px;
+        }
+        
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 90%;
+            margin-left: 5%;
+            -webkit-box-shadow: 0px 0px 51px -13px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 0px 0px 51px -13px rgba(0, 0, 0, 0.57);
+            box-shadow: 0px 0px 51px -13px rgba(0, 0, 0, 0.57);
+        }
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+        }
+        input[type=text]:focus {
+            border: 3px solid #555;
+        }
